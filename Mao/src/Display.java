@@ -11,15 +11,14 @@ public class Display {
 	
 	public void init() {
 		
-		if (glfwInit() != GL_TRUE) {
+		if (glfwInit() != true) {
 		    System.err.println("Error initializing GLFW");
 		    System.exit(1);
 		}
 		
-		window = glfwCreateWindow(1280, 720, "Mao", 0, NULL);
+		window = glfwCreateWindow(1280, 720, "Mao", 0, 0);
 		
-		if (windowID == NULL)
-		{
+		if (window == Null) {
 		    System.err.println("Error creating a window");
 		    System.exit(1);
 		}
