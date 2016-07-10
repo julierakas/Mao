@@ -1,5 +1,6 @@
 import java.io.*;
-import java.net.*;
+import java.net.Socket;
+import java.util.Scanner;
 
 public class Client {
 	
@@ -7,7 +8,11 @@ public class Client {
 	static Socket cSocket;
 
 	public static void main(String[] args) throws Exception {
-		cSocket = new Socket("localhost", 7777);
+		int portNum = Integer.parseInt(args[0]);
+		if (args.length > 1) {
+			portNum = 7777;
+		}
+		cSocket = new Socket("localhost", portNum);
 		in = new DataInputStream(cSocket.getInputStream());
 
 	}
