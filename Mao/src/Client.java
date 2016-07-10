@@ -8,10 +8,9 @@ public class Client {
 	static Socket cSocket;
 
 	public static void main(String[] args) throws Exception {
-		int portNum = Integer.parseInt(args[0]);
-		if (args.length > 1) {
-			portNum = 7777;
-		}
+		System.out.println("Port Number: ");
+		Scanner input = new Scanner(System.in);
+		int portNum = input.nextInt();
 		cSocket = new Socket("localhost", portNum);
 		in = new DataInputStream(cSocket.getInputStream());
 
