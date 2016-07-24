@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
-
+import java.net.*;
 public class Client {
 	
 	static DataInputStream in;

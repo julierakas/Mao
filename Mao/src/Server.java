@@ -18,7 +18,6 @@ public class Server {
 	}
 		
 	public void runServer(int portNum) throws Exception {
-		try {
 			while (true) {
 			sSocket = serverSocket.accept(); // Client accepts server through this
 			out = new DataOutputStream(sSocket.getOutputStream());
