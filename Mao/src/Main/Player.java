@@ -1,10 +1,10 @@
 package Main;
+
 public interface Player {
-  private Hand hand;
-  private string name;
-
-  public void play();
-  public void draw();
-  
-
+	
+	public String getName();
+	public void play();
+	public void draw();
+	public void drawHand();
+	
 }
